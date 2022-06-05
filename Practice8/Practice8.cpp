@@ -234,7 +234,8 @@ int main()
         cout << arr[i] << " ";
     }
     */
-
+    
+    /*
     double arr[5] = { 0 };
     double summ = 0;
     for (int i = 0; i < 5; i++) {
@@ -243,5 +244,27 @@ int main()
         summ += arr[i];
     }
     cout << "Периметр пятиугольника равен " << summ << " см.\n";
+    */
 
+    
+    string month[12] = { "January", "February", "March",
+                         "April", "May", "June",
+                         "July", "August", "September",
+                         "October", "November", "December" };
+    double money_month[12];
+    cout << "ведите прибыль в 1 месяц->";
+    cin >> money_month[0];
+    double max= money_month[0], min= money_month[0];
+
+    for (int i = 1; i < 12; i++) {
+        cout << "Введите прибыль в " << i + 1 << " месяц->";
+        cin >> money_month[i];
+        if (min > money_month[i]) min = money_month[i];
+        if (max < money_month[i]) max = money_month[i];
+    }
+
+    for (int i = 1; i < 12; i++) {
+        if (max == money_month[i]) cout << "Максимальная прибыль: " << max << " " << month[i] << endl;
+        if (min == money_month[i]) cout << "Минимальная прибыль: " << min << " " << month[i] << endl;
+    }
 }
