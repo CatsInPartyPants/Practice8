@@ -172,23 +172,76 @@ int main()
     /*
     int number_for_find = 0;
     bool is_in_arr = false;
+    int count_of_number = 0;
     int arr[10] = { 7,9,2,0,4,6,0,4,3,9 };
     cout << "Введите число ->";
     cin >> number_for_find;
     for (int i = 0; i < 10; i++) {
         if (number_for_find == arr[i]) {
             is_in_arr = true;
-            break;
+            count_of_number++;            
         }
     }
     if (is_in_arr == true) {
-        cout << "Есть в массиве!";
+        cout << "Есть в массиве! И повторяется " << count_of_number << " раз!";
     }
     else {
         cout << "отсутсвует в массиве!";
     }
     */
 
+    /*
+    const int s = 10;
+    int arr[s] = { 7,9,2,0,4,6,0,4,3,9 };
+    int number_for_find = 0;
+    bool f = false;
+    cout << "Введите число ->";
+    cin >> number_for_find;
+
+    for (int i = 0; i < s-1; i++)
+    {
+        for (int j = i+1; j < s; j++)
+        {
+            if (arr[i] == number_for_find && arr[i] == arr[j]) {
+                f = true;
+                break;
+            }
+        }
+        if (f == true) { cout << "Данное число повторяется в массиве!\n"; break; }
+    }
+    */
+
+    /*
+    double arr[6];
+    double for_month = 0;
+    double summ = 0;
+    for (int i = 0; i < 6; i++) {
+        cout << "Введите доход за " << i + 1 << " месяц-> ";
+        cin >> arr[i];
+    }
+    for (int i = 0; i < 6; i++) {
+        summ += arr[i];
+    }
+
+    cout << "Доход за 6 месяцев составил " << summ << " руб." << endl;
+    */
     
+    /*
+    const int s = 10;
+    int arr[s] = { 7,9,2,0,4,6,0,4,3,9 };
+
+    for (int i = s-1; i >= 0; i--) {
+        cout << arr[i] << " ";
+    }
+    */
+
+    double arr[5] = { 0 };
+    double summ = 0;
+    for (int i = 0; i < 5; i++) {
+        cout << "Введите " << i + 1 << " сторону пятиугольника->";
+        cin >> arr[i];
+        summ += arr[i];
+    }
+    cout << "Периметр пятиугольника равен " << summ << " см.\n";
 
 }
